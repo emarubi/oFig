@@ -1,0 +1,113 @@
+body {
+    font-family: Raleway, sans-serif;
+}
+
+h3 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h4 {
+    color: #ccc;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+    line-height: 1.3em;
+}
+
+/* HEADER */
+header {
+    color: white;
+}
+
+header h1 {
+    background-color: #c80000;
+    font-size: 30px;
+    font-weight: bold;
+    font-size: 2.5em;
+    padding: 20px;
+}
+
+header h1 span {
+    font-size: 0.4em;
+}
+
+header h2 {
+    background-color: #666;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+
+header h2 span {
+    font-style: italic;
+}
+
+/* MAIN */
+
+#container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.picture {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 320px;
+    margin: 5px 10px;
+}
+
+.picture img{
+    height: 300px;
+}
+
+#images p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.panier {
+    background-color: #c80000;
+    padding: 20px;
+    color: white;
+}
+
+.prix_container {
+    display: inline-flex;
+    justify-content: space-between;
+    float: right;
+    clear: right;
+}
+
+.prix {
+    font-weight: bolder;
+    font-size: 18px;
+    margin-left: 5px;
+    float: right;
+    clear: right;
+}
+
+.prix_barre {
+    text-decoration: line-through;
+    font-size: 16px;
+    float: left;
+}
+
+/* FOOTER */
+footer{
+    background-color: #666;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+}
