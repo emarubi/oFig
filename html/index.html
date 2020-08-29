@@ -5,109 +5,270 @@
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-        <title>oFig -figurines et statuettes</title>
+        <title>Shop oFig</title>
     </head>
     <body>
         <div id="container">
             <header>
-                <h1>oFig <span>Figurines et statuettes</span></h1>
-                <h2>Figurines sur le thème <span>Final Fantasy</span></h2>
+                <h1 class="logo">
+                    oFig 
+                    <span class="logo__desc">
+                        Figurines et statuettes
+                    </span>
+                </h1>
+                <h2 class="selection">
+                    Figurines sur le thème 
+                    <strong class="selection__current">
+                        Final Fantasy
+                    </strong>
+                </h2>
             </header>
-            <div id="soldes">Soldes</div>
             <main>
-                <section id="images">
-                    <article class="picture">
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/aerith.png" alt="Aerith">
-                        <h4>Final Fantasy Crisis Core</h4>
-                        <h3>Aerith Gainsborough</h3>
-                        <p>Figurine de 7 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier 
-                            <span class="prix_container">
-                                <span class="prix">74,90 €</span>
-                            </span>    
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy Crisis Core
+                        </h3>
+                        <h2 class="item__content__name">
+                            Aerith Gainsborough
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 7 pouces - livrée avec son packaging
                         </p>
-                    </article>
-                    <article class="picture">
-                        <div class="circle"><span>-20%</span></div>
+                    </div>
+                    <div class="item__buy">
+                        <!-- on met une balise a href pour pouvoir cliquer dessus dans le futur -->
+                        <a class="item__buy__cart" href="#"> <!-- pour faire un lien fictif on peut mettre # dans le href, l'action sera de recharger la page courante -->
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                                74,90 &euro; <!-- pour les caractères spéciaux on privilégie les entité HTML, donc à la place de € on met &euro;-->
+                        </span>    
+                    </div>
+                 </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/cloud.png" alt="Cloud">
-                        <h4>Final Fantasy VII</h4>
-                        <h3>Cloud Strife Remake</h3>
-                        <p>Figurine de 8 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier 
-                            <span class="prix_container">
-                                <span class="prix_barre">74,90 €  </span>
-                                <span class="prix">59 €</span>
-                            </span>    
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy VII
+                        </h3>
+                        <h2 class="item__content__name">
+                            Cloud Strife Remake
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 8 pouces - livrée avec son packaging
                         </p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <del class="item__buy__price--old">
+                                74,90 &euro;
+                            </del>
+                           <ins>
+                                59 &euro;
+                           </ins>
+                        </span>    
+                    </div>                     
+                </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/cloud-ac.png" alt="Cloud Strife">
-                        <h4>Final Fantasy Advent Children</h4>
-                        <h3>Cloud Strife</h3>
-                        <p>Figurine de 7 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier 
-                            <span class="prix_container">
-                                <span class="prix">98,90 €</span>
-                            </span>    
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy Advent Children
+                        </h3>
+                        <h2 class="item__content__name">
+                            Cloud Strife
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 7 pouces - livrée avec son packaging
                         </p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                98,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/cloud-bike.png" alt="Cloud & Fenrir">
-                        <h4>Final Fantasy Advent Children</h4>
-                        <h3>Cloud Strife & Fenrir</h3>
-                        <p>Figurine de 7 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier 
-                            <span class="prix_container">
-                                <span class="prix">113,90 €</span>
-                            </span>    
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy Advent Children
+                        </h3>
+                        <h2 class="item__content__name">
+                            Cloud Strife & Fenrir
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 7 pouces - livrée avec son packaging
                         </p>
-                    </article>
-                    <article class="picture">
-                        <div class="circle"><span>-30%</span></div>
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                113,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>    
+                </article>
+                <article class="item">
+                     <div class="item__image">
                         <img src="../images/tifa.png" alt="Tifa">
-                        <h4>Final Fantasy Advent Children</h4>
-                        <h3>Tifa Lockhart</h3>
-                        <p>Figurine de 7 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier 
-                            <span class="prix_container">
-                                <span class="prix_barre">98,90 €  </span>
-                                <span class="prix">69 €</span>
-                            </span>    
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy Advent Children
+                        </h3>
+                        <h2 class="item__content__name">
+                            Tifa Lockhart
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 7 pouces - livrée avec son packaging
                         </p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <del class="item__buy__price--old">
+                                98,90 &euro;
+                            </del>
+                           <ins>
+                                69 &euro;
+                           </ins>
+                        </span>    
+                    </div>    
+
+                </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/vincent.png" alt="Vincent">
-                        <h4>Final Fantasy VII</h4>
-                        <h3>Vincent Valentine</h3>
-                        <p>Figurine de 7 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier <span class="prix">74,90 €</span></p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy VII
+                        </h3>
+                        <h2 class="item__content__name">
+                            Vincent Valentine
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 7 pouces - livrée avec son packaging
+                        </p>
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                74,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>  
+                </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/barret.png" alt="Barret">
-                        <h4>Final Fantasy VII</h4>
-                        <h3>Barret Wallace</h3>
-                        <p>Figurine de 8 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier <span class="prix">74,90 €</span></p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy VII
+                        </h3>
+                        <h2 class="item__content__name">
+                            Barret Wallace
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 8 pouces - livrée avec son packaging
+                        </p>
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                74,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>  
+                </article>
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/sephiroth.png" alt="Sephiroth">
-                        <h4>Final Fantasy VII</h4>
-                        <h3>Sephiroth</h3>
-                        <p>Figurine de 10 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier <span class="prix">113,90 €</span></p>
-                    </article>
-                    <article class="picture">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy VII
+                        </h3>
+                        <h2 class="item__content__name">
+                            Sephiroth
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 10 pouces - livrée avec son packaging
+                        </p>
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                113,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>  
+                </article>
+
+                <article class="item">
+                    <div class="item__image">
                         <img src="../images/nanaki.png" alt="Nanaki">
-                        <h4>Final Fantasy VII</h4>
-                        <h3>Nanaki - Red XIII</h3>
-                        <p>Figurine de 5 pouces - livrée avec son packaging</p>
-                        <p class="panier">Ajouter au panier <span class="prix">98,90 €</span></p>
-                    </article>
-                </section>
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__content__category">
+                            Final Fantasy VII
+                        </h3>
+                        <h2 class="item__content__name">
+                            Nanaki - Red XIII
+                        </h2>
+                        <p class="item__content__desc">
+                            Figurine de 5 pouces - livrée avec son packaging
+                        </p>
+                    </div>
+                    <div class="item__buy">
+                        <a class="item__buy__cart" href="#"> 
+                            Ajouter au panier
+                        </a>    
+                        <span class="item__buy__price">
+                            <span class="prix">
+                                98,90 &euro; 
+                            </span>
+                        </span>    
+                    </div>
+                 </article>
             </main>
             <footer>
                 oFig - toutes les images sont sous copyright SquareEnix
             </footer>
-        </div> 
+        </div>
     </body>
 </html>

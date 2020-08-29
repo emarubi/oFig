@@ -1,0 +1,205 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 16px;
+    background-color: #c80000;
+}
+
+.logo__desc {
+    /* rem prend pour référence la taille de l'élément racine, html
+    si on n'a pas déféni de font-size sur html, on prend la taille défaut du navigateur*/
+    font-size: 0.8rem;
+}
+
+.selection {
+    background-color: #666;
+    text-align: center;
+    /* pour les nombres à virgule qui commencent par 0, on peut omettre le 0 */
+    padding: .5em;
+}
+
+.selection__current {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #666;
+    text-align: center;
+    color: white;
+    font-size: .8em;
+    padding: 1em;
+}
+
+/* MAIN */
+
+main {
+    /* padding-top: 100px; */
+
+    /* on lui donne une largeur et on la centre */
+    max-width: 800px;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    /* on positionne le parent, il servira de référence aux enfants positionnés en absolute*/
+    position: relative;
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: .3em;
+    margin: .3em;
+    /* on ajoute un tit effet sympa au survol de la souris, une transition en douceur */
+    transition: all .5s ease-in-out;
+}
+
+.item--sales {
+    /* on sort du flow, on positionne cet élément avec comme référence l'ancètre positionné le plus proche */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border: 4px solid #ccc;
+    /* avec le border-radius, on peut donner à notre div une forme arrondie parfaite avec la valeur 50%*/
+    border-radius: 50%;
+    background-color: #666;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.item:hover {
+    /* 4 valeurs à indiquer :
+    - taille en pixels de l'ombre sur la droite (valeur positive) ou sur la gauche (valeur négative)
+    - taille en pixels de l'ombre en bas (valeur positive) ou en haut (valeur négative)
+    - taille en pixels de l'étalement de l'ombre 
+    - couleur de l'ombre
+
+    pour mettre l'ombrage à l'intérieur de la div, on place le mot-clé inset avant les 1ères valeurs en pixel
+    */
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.item__image > img {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    transition: all .5s ease-in-out;
+    animation: rotateImg 2s infinite;
+}
+
+.item__image > img:hover {
+    transform: scale(1.1);
+}
+
+
+.item__content__category {
+    text-transform: uppercase;
+    color: #ccc;
+    font-weight: bold;
+    font-size: .7em;
+    border-bottom: 1px solid #ccc;
+    padding: .3em;
+    margin: .3em;
+}
+
+.item__content__name {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: .5em 0;
+    text-transform: capitalize;
+}
+
+.item__content__desc {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    margin: .5em 0;
+}
+
+.item__buy {
+    background-color: #c80000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1em;
+    margin-top: 1em;
+    /* encore un effet au survol, on prévoit une transition */
+    transition: all .5s ease-in-out;
+}
+
+.item__buy:hover {
+    background-color: #333;
+}
+
+.item__buy__cart {
+    font-size: .8em;
+}
+
+.item__buy__price {
+    font-weight: 700;
+}
+
+/* standard BEM : on part de la classe générique item__buy__price et on la modifie
+on symbolise ça en BEM avec -- */
+
+.item__buy__price--old {
+    /* on raye le prix */
+    text-decoration: line-through;
+    /* on remet le texte à la bonne taille */
+    font-size: .8em;
+    /* on enlève le gras */
+    font-weight: normal;
+    margin: 0 0.3em;
+
+}
+
+.fixed-sales {
+    /* on veut une position fixe à l'écran*/
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: #c80000;
+    color: white;
+    width: 25px;
+    padding: 15px 5px;
+    text-transform: uppercase;
+    font-size: .8em;
+    text-align: center;
+    /* on force l'affichage en vertical */
+    /* 1ère solution : word-break: break-all; */
+    overflow-wrap: break-word;
+    /* on décompose le border-radius pour arrondir uniquement les coins situés à droite*/
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0.5px 0.5px 3px black; 
+}
+
+/* animation avec les @keyframes */
+@keyframes rotateImg {
+    0% {transform: rotateY(0deg)}
+    100% {transform: rotateX(3600deg)}
+}
