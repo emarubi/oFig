@@ -1,0 +1,36 @@
+div {
+    height: 150px;
+}
+
+#div1 {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+
+#div1_1 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 50%;
+    width: 50%;
+    background-color: darkturquoise;
+}
+#div2 {
+    position: relative;
+    top: 0px;
+    left: 150px;
+    background-color: gray;
+}
+#div3 {
+    background-color: pink;
+}
+#div4 {
+    background-color: aquamarine;
+}
+#div5 {
+    background-color: darkred;
+}
+#div6 {
+    background-color: darkslateblue;
+}

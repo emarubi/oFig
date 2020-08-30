@@ -4,13 +4,19 @@ html {
 
 body {
     font-family: "Raleway", sans-serif;
+    font-size: 16px;
 }
 
 /* HEADER */
 
 header {
+    position: sticky; /* on peut utiliser fixed, mais on est obligés d'ajouter un padding-top:100px dans le main */
+    top: 0;
+    left: 0;
+    width: 100%;
     color: white;
-}
+    z-index: 1;
+ }
 
 .logo {
     font-size: 2em;
@@ -39,14 +45,15 @@ header {
 
 main {
     /*on lui donne une largeur et on la centre */
-    width: 800px;
+    max-width: 800px; /* max-width à la place de width rend le site responsive */
     margin: 1em auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+ }
 
 .item {
+    position: relative; /* pour pouvoir utiliser position sur'élément .item--sales, j'ai dû ajouter poisition: relative sur le parent .item */
     width: 250px;
     border: 1px solid #ccc;
     padding: .3em;
@@ -62,6 +69,21 @@ main {
     -étalement de l'ombre
     - couleur de l'ombre 
     - pour mettre l'ombrage à l'intérieur de la div, on place le mot inset avant les valeurs */
+}
+
+.item--sales {
+    position: absolute; /* pour pouvoir utiliser position sur'élément, j'ai dû ajouter poisition: relative sur le parent .item */
+    top: 10px;
+    right: 10px;
+    color: white;
+    background: #666;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* avec border-radius on peut dessiner un circle */
+    border: 0.3em solid #ccc;
+    padding: 17px 8px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .item__image > img {
@@ -107,9 +129,10 @@ main {
     color: white;
     padding: 1em;
     margin-top: 1em;
-    font-size: .8em;
+    font-size: .9em;
     /* on ajoute une transition en douceur */
     transition: all .5s ease-in-out;
+    box-shadow: 1px 1px 3px black;
 }
 
 .item__buy:hover {
@@ -117,7 +140,7 @@ main {
 }
 
 .item__buy__cart {
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .item__buy__price {
@@ -126,9 +149,27 @@ main {
 
 .item__buy__price--old {
     text-decoration: line-through; /* on raye le prix dans la balise <del> */
-    font-size: .8em;
+    /*font-size: .9em;*/
     font-weight: normal; /* ça enlève le bold */
     margin: 0.3em;
+}
+
+.fixed-sales {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: #c80000;
+    color: white;
+    text-transform: uppercase;
+    width: 25px;
+    padding: 15px 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word; /* word-break: break-word à le même résultat */
+    box-shadow: 1px 1px 3px black;
 }
 
 /* FOOTER */
