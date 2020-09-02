@@ -188,3 +188,140 @@ footer {
     50% {transform: rotateY(180deg)}
     100% {transform: rotateY(360deg)}
 }
+
+/* CART */
+
+.cart {
+    width: 600px;
+    margin: 1em auto;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cart form {
+    width: 100%;
+}
+
+.cart h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: .8em 0;
+}
+
+.cart__section {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+}
+
+.cart__section--column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart__table {
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.cart__table thead {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart__table th, .cart__table td {
+    padding: .5em 0;
+}
+
+.cart__quantity {
+    width: 40px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+
+.cart__remove {
+    color: #c80000;
+    text-decoration: underline;
+    font-size: .7em;
+}
+
+.cart__total {
+    font-weight: bold;
+}
+
+.cart__price {
+    color: #c80000;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-shadow: -1px 1px 2px #ccc;
+}
+
+.cart__livraison {
+    margin-bottom: 1em;
+}
+
+.cart__section h4 {
+    font-weight: bold;
+    color: #666;
+    font-size: 1.1em;
+    padding: 1em 0;
+    margin-bottom: .5em;
+}
+
+.cart__section label {
+    display: inline-block;
+    font-size: .8em;
+    margin-bottom: .5em;
+}
+
+/* on peut cibler les balises d'un certain type (input) en précisant la valeur d'un de leurs attributs. On utilise des [] après le type de balise, à l'intérieur, on indique l'attribut et la valeur attendue */
+.cart__section label input[type="radio"] {
+    vertical-align: bottom;
+}
+
+.cart__section label input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+
+.cart__section input[type="text"], .cart__section textarea {
+    width: 100%;
+    background-color: #f8f8f8;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .3em;
+    padding: .5em .8em;
+}
+
+.cart__amount {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.cart__button {
+    border: none;
+    padding: 1em 1.7em;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.cart__button:hover {
+    background-color: #666;
+    color: white;
+}
+
+.cart__button--continue {
+    background-color: #ccc;
+    color: black;
+}
+
+.cart__button--submit {
+    background-color: #c80000;
+    color: white;
+}
+

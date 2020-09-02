@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/stylesCart.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-        <title>Shop oFig - panier</title>
+        <title>Shop oFig - Panier</title>
     </head>
     <body>
         <div id="container">
@@ -19,119 +19,107 @@
                 <h2 class="selection">
                     Votre panier 
                     <strong class="selection__current">
-                        2 produits
+                        3 produits
                     </strong>
                 </h2>
             </header>
-            <main>
-                <section id="panier">
-                    <h1 class="title-section">
-                        Votre panier
-                    </h1>
-                    <table id="table">
-                        <thead>
-                            <tr>
-                                <th class="title-column">Figurine</th>
-                                <th class="title-column">Prix unitaire</th>
-                                <th class="title-column">Quantité</th>
-                            </tr>
-                        </thead>
-                        <tbody>    
-                            <tr>
-                                <td>Cloud Strife</td>
-                                <td>59 &euro;</td>
-                                <td> 
-                                    <a href="#" class="quantity">1</a>
-                                    <a href="#" class="delete">supprimer</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tifa Lockhart</td>
-                                <td>69 &euro;</td>
-                                <td> 
-                                    <a href="#" class="quantity">1</a>
-                                    <a href="#" class="delete">supprimer</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Barret Wallace</td>
-                                <td>69 &euro;</td>
-                                <td> 
-                                    <a href="#" class="quantity">1</a>
-                                    <a href="#" class="delete">supprimer</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="2" class="titre-footer">Total de la commande</td>
-                                <td class="total-price">197€</td>
-                            </tr>
-                        </tfoot>    
-                    </table>
-                    <hr>
-                </section>
-                <section id="livraison">
-                    <h1 class="title-section">
-                        Préférences de livraison
-                    </h1>
-                        <form action="" id="shipment">
-                            <fieldset>
-                                <legend>Où souhaitez-vous être livré ?</legend>
-                                <div class="form-radio-row">    
-                                    <input type="radio" id="adress1" name="adress1" value="1" checked>      
-                                    <label for="adress1">Mon adresse courante</label>
-                                </div>
-                                <div class="form-radio-row">    
-                                    <input type="radio" id="adress2" name="adress2" value="2">
-                                    <label for="adress2">Autre adresse</label>
-                                </div>    
-                            </fieldset>
-                            <fieldset>
-                                <legend>Adresse</legend>
-                                <div class="form-row">
-                                    <label class="label" for="rue">Rue </label>
-                                    <input type="text" id="rue" name="rue" placeholder="Votre rue">
-                                </div>
-                                <div class="form-row">
-                                    <label class="label" for="postalCode">Code postal</label>
-                                     <input type="number" id="postalCode" name="postalCode" placeholder="Code postal">
-                                </div>
-                                <div class="form-row">
-                                    <label class="label" for="ville">Ville</label>
-                                     <input type="number" id="ville" name="ville" placeholder="Code postal">
-                                </div>
-
-                            </fieldset>
-                            <fieldset id="options">
-                                <legend>Options</legend>
-                                <div class="form-checkbox-row">
-                                    <input type="checkbox" id="suivi" name="suivi">
-                                    <label class="label" for="suivi">Suivi de livraison par sms (inclus)</label>
-                                </div>
-                                <div class="form-checkbox-row">
-                                    <input type="checkbox" id="satisfait" name="satisfait">
-                                    <label for="satisfait" class="label">Satisfait ou remboursé (+2 euro)</label>
-                                </div>
-                                <div class="form-checkbox-row">
-                                    <input type="checkbox" id="garantie" name="garantie">
-                                    <label for="garantie" class="label">Garantie 2 ans (+10 euro)</label>
-                                </div>
-                            </fieldset>
-                            <fieldset id="informations">
-                                <legend>Informations coplémentaires</legend>
-                                <label for="infos">interphone, bâtiment, etc.</label>
-                                <textarea name="infos" id="infos" cols="30" rows="3"></textarea>
-                            </fieldset>
-                        </form>
-                    <hr>
-                </section>
-                <section id="total">
-                    <hr>
-                </section>
-                <section id="validation">
-                    <hr>
-                </section>
+            <main class="cart">
+                <form action=""> <!-- toute la page est considérée comme un form, car il y a des infos que je vais récupérer-->
+                    <h3>Votre panier</h3>
+                    <section class="cart__section">
+                        <table class="cart__table">
+                            <thead>
+                                <tr>
+                                    <th>Figurine</th>
+                                    <th>Prix unitaire</th>
+                                    <th>Quantité</th>
+                                </tr>
+                            </thead>
+                            <tbody>    
+                                <tr>
+                                    <td>Cloud Strife</td>
+                                    <td>59 &euro;</td>
+                                    <td> 
+                                        <input class="cart__quantity" type="number" value="1">
+                                         <a href="#" class="cart__remove">supprimer</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tifa Lockhart</td>
+                                    <td>69 &euro;</td>
+                                    <td> 
+                                        <input class="cart__quantity" type="number" value="1">
+                                         <a href="#" class="cart__remove">supprimer</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Barret Wallace</td>
+                                    <td>69 &euro;</td>
+                                    <td> 
+                                        <input class="cart__quantity" type="number" value="1">
+                                         <a href="#" class="cart__remove">supprimer</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" class="cart__total">Total de la commande</td>
+                                    <td class="cart__price">197 &euro;</td>
+                                </tr>
+                            </tfoot>    
+                        </table>
+                    </section>
+                    <h3>Préférences de livraison</h3>
+                    <section class="cart__section cart__section--column">
+                        <div class="cart__livraison">
+                            <h4>Où souhaitez-vous être livré?</h4>
+                            <label for="current-address">
+                                <input type="radio" id="current-address" name="shipping" checked>
+                                Mon adresse courante
+                            </label>
+                            <label for="other-address">
+                                <input type="radio" id="other-address" name="shipping">
+                                Autre adresse
+                            </label>
+                            <h4>Options</h4>
+                            <label for="sms">
+                                <input type="checkbox" id="sms" name="sms" checked>
+                                Suivi de livraison par sms (inclus)
+                            </label>
+                            <label for="money-back">
+                                <input type="checkbox" id="money-back" name="money-back">
+                                Satisfait ou remboursé (+2 euro)
+                            </label>
+                            <label for="care">
+                                <input type="checkbox" id="care" name="care">
+                                Garantie 2 ans (+10 euro)
+                            </label>
+                        </div>
+                        <div class="cart__livraison">
+                            <h4>Adresses</h4>
+                            <label for="street">Rue</label>
+                            <input type="text" id="street" name="street">
+                            <label for="zipcode">Code postal</label>
+                            <input type="text" id="zipcode" name="zipcode">
+                            <label for="city">Ville</label>
+                            <input type="text" id="city" name="city">
+                            <h4>Informations complémentaires</h4>
+                            <label for="infos">interphone, bâtiment, ...</label>
+                            <textarea name="infos" id="infos"></textarea>
+                        </div>
+                    </section>    
+                    <section class="cart__section">
+                        <div class="cart_amount">
+                            <span class="cart__total">Montant total à régler :</span>
+                            <span class="cart__price">197 &euro;</span>
+                        </div>
+                    </section>
+                    <!-- buttons -->
+                    <section class="cart__section cart__section--column">
+                        <button class="cart__button cart__button--container">Continuer vos achats</button>
+                        <button class="cart__button cart__button--submit">Valider et payer</button>
+                    </section>
+                </form>
             </main>
             <div class="fixed-sales">
                 Soldes

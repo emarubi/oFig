@@ -149,6 +149,10 @@ form legend {
     margin-bottom: .6em;
     padding-right: 3%;
 }
+
+.form-row input {
+    margin-bottom: .6em;
+}
   
   /* tous les enfants direct d'un élément ayant la class form-row */
   /* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 
