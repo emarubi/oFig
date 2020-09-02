@@ -41,7 +41,7 @@ header {
 
 main {
     /*on lui donne une largeur et on la centre */
-    max-width: 800px; /* max-width à la place de width rend le site responsive */
+    max-width: 1000px; /* max-width à la place de width rend le site responsive */
     margin: 1em auto;
     display: flex;
     justify-content: space-around;
@@ -325,3 +325,47 @@ footer {
     color: white;
 }
 
+.cart__table tbody tr:nth-child(odd) { /* pour cibler les lignes impaires de mon tableau et lui appliquer un style */
+    background-color: #ccc;
+}
+
+@media print {
+    header, footer, .fixed-sales {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .cart {
+        width: 900px;
+    }
+    .cart__section--column {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+    .cart {
+        width: 90%;
+    }
+    .cart__section--column {
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+    }
+    .cart__section label {
+        font-size: 1.1em;
+    }
+    .fixed-sales {
+        font-size: 1em;
+    }
+}
