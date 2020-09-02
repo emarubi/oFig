@@ -1,0 +1,193 @@
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+}
+
+/* HEADER */
+
+header {
+    position: sticky; /* on peut utiliser fixed, mais on est obligés d'ajouter un padding-top:100px dans le main */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    z-index: 1;
+ }
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 16px;
+    background-color: #c80000;
+}
+
+.logo__desc {
+    font-size: .8rem; /* rem prend pour référence la taille de l'élément racine (html);
+    si on n'a pas défini de font-size pour html on prend la taille par default du navigateur */
+}
+
+.selection {
+    background-color: #666;
+    text-align: center;
+    padding: .5em;
+}
+
+.selection__current {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* MAIN */
+
+main {
+    /*on lui donne une largeur et on la centre */
+    max-width: 800px; /* max-width à la place de width rend le site responsive */
+    margin: 1em auto;
+    /*display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; */
+ }
+
+ .title-section {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 1.4em 0;
+}
+
+/* Section TABLE */
+
+table {
+    border: 0.5px solid rgb(190,190,190, 0.2);
+    box-shadow: 1px 1px 3px rgb(190,190,190);
+    width: 80%;
+    margin: 1em;
+}
+
+.title-column {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1.4em 0.8em;
+}
+th {
+    border-bottom: 1px solid rgb(190,190,190);
+    padding: 10px 30px;
+}    
+
+tbody {
+    margin: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.quantity {
+    border: 1px solid rgb(190,190,190);
+    border-radius: 2px;
+    padding-right: 1.5em;
+    padding-left: 0.3em;
+    box-shadow: 1px 1px 2px gray;
+
+}
+
+.delete {
+    font-size: 0.7em;
+    color: #c80000;
+    text-decoration: underline;
+    margin-left: 0.3em;
+}
+
+.titre-footer {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1.2em;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #c80000;
+}
+
+/* Section LIVRAISON */
+
+#shipment {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1em;
+    font-size: 0.9em;
+}
+
+form {
+    padding: 2em;
+    margin: 2em;
+ }
+  
+form fieldset {
+    display: flex;
+    width: 50%;
+    margin-bottom: 1.8em;;
+    padding: .5em 1em 0;
+    margin-bottom: 2em;
+}
+form legend {
+    margin-left: -.3em;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.form-radio-row label {
+    display: inline;
+}
+
+.form-row label{
+    display: block;
+    margin-bottom: .6em;
+    padding-right: 3%;
+}
+  
+  /* tous les enfants direct d'un élément ayant la class form-row */
+  /* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 
+.form-row > * {
+    flex-basis: 70%;
+}*/
+  
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+
+/* pastille SOLDES */
+
+ .fixed-sales {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: #c80000;
+    color: white;
+    text-transform: uppercase;
+    width: 25px;
+    padding: 15px 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: break-word; /* word-break: break-word à le même résultat */
+    box-shadow: 1px 1px 3px black;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #666;
+    text-align: center;
+    color: white;
+    font-size: .8em;
+    padding: 1em;
+}
